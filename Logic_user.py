@@ -1,8 +1,8 @@
 def belanja():
-    print("")
+    print("belanja")
 
 def keranjang():
-    print("")
+    print("hghgghg")
 
 def ubah_keranjang():
     print("")
