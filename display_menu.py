@@ -4,7 +4,7 @@ import data_history as dhis
 
 menu_awal = ()
 
-menu_admin = ()
+menu_admin = ('menu')
 
 menu_user = ()
 
