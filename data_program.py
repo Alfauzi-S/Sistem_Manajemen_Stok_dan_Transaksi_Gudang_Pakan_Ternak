@@ -1,13 +1,13 @@
+# nested Dictionary
 data_users = {
     "admin" : {"password" : "123", "peran" : "admin"},
     "juragan" : {"password" : "piton", "peran" : "admin"},
     "peternak" : {"password" : "pembeli", "peran" : "user"}
     }
 
-# data_program.py
-
+# nested Dictionary
 data_produk = {
-    "A01": {
+    "A1": {
         "nama produk": "Pakan Sapi Potong",
         "stok": 120,
         "ukuran/per stok": "50 kg",
@@ -16,7 +16,7 @@ data_produk = {
         "tanggal masuk": "2025-11-01",
         "kategori": "Ruminansia"
     },
-    "A02": {
+    "A2": {
         "nama produk": "Pakan Sapi Perah",
         "stok": 100,
         "ukuran/per stok": "50 kg",
@@ -25,7 +25,7 @@ data_produk = {
         "tanggal masuk": "2025-11-02",
         "kategori": "Ruminansia"
     },
-    "A03": {
+    "A3": {
         "nama produk": "Pakan Ayam Broiler",
         "stok": 200,
         "ukuran/per stok": "25 kg",
@@ -34,7 +34,7 @@ data_produk = {
         "tanggal masuk": "2025-11-03",
         "kategori": "Unggas"
     },
-    "A04": {
+    "A4": {
         "nama produk": "Pakan Ayam Layer",
         "stok": 180,
         "ukuran/per stok": "25 kg",
@@ -43,7 +43,7 @@ data_produk = {
         "tanggal masuk": "2025-11-04",
         "kategori": "Unggas"
     },
-    "A05": {
+    "A5": {
         "nama produk": "Pakan Ikan Lele",
         "stok": 300,
         "ukuran/per stok": "20 kg",
@@ -52,7 +52,7 @@ data_produk = {
         "tanggal masuk": "2025-11-05",
         "kategori": "Perikanan"
     },
-    "A06": {
+    "A6": {
         "nama produk": "Pakan Bebek Pedaging",
         "stok": 90,
         "ukuran/per stok": "25 kg",
@@ -62,7 +62,7 @@ data_produk = {
         "kategori": "Unggas"
     },
 
-    "B01": {
+    "B1": {
         "nama produk": "Pakan Burung Lovebird",
         "stok": 50,
         "ukuran/per stok": "5 kg",
@@ -71,7 +71,7 @@ data_produk = {
         "tanggal masuk": "2025-11-07",
         "kategori": "Hewan Peliharaan"
     },
-    "B02": {
+    "B2": {
         "nama produk": "Pakan Kelinci",
         "stok": 60,
         "ukuran/per stok": "10 kg",
@@ -80,7 +80,7 @@ data_produk = {
         "tanggal masuk": "2025-11-08",
         "kategori": "Hewan Peliharaan"
     },
-    "B03": {
+    "B3": {
         "nama produk": "Pakan Hamster",
         "stok": 40,
         "ukuran/per stok": "5 kg",
@@ -89,7 +89,7 @@ data_produk = {
         "tanggal masuk": "2025-11-09",
         "kategori": "Hewan Peliharaan"
     },
-    "B04": {
+    "B4": {
         "nama produk": "Pakan Ikan Hias",
         "stok": 75,
         "ukuran/per stok": "20 kg",
