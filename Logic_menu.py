@@ -5,15 +5,15 @@ import Essential_tools as tool
 import Visualisasi_data as vs
 
 def menu_admin():
-    tool.clear()
-    print("selamat datang".center(50))
-    print(dmn.menu_admin)
     while True:
+        tool.clear()
+        print("selamat datang".center(50))
+        print(dmn.menu_admin)
         pilihan = input('masukan pilihan: ')
         if pilihan == '1':
-            ladm.create()
-        elif pilihan == '2':
             ladm.read()
+        elif pilihan == '2':
+            ladm.create()
         elif pilihan == '3':
             ladm.update()
         elif pilihan == '4':
@@ -28,10 +28,10 @@ def menu_admin():
             print("tidak valid")
 
 def menu_user():
-    tool.clear()
-    print("selamat datang".center(50))
-    print(dmn.menu_user)
     while True:
+        tool.clear()
+        print("selamat datang".center(50))
+        print(dmn.menu_user)
         pilihan = input('masukan pilihan: ')
         if pilihan == '1':
             lusr.belanja()
