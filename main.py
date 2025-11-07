@@ -4,18 +4,19 @@ import Essential_tools as tool
 
 def main():
     while True:
-        tool.clear
+        tool.clear()
+        print("selamat datang".center(50))
         print(dmn.menu_awal)
-        pilihan = input
+        pilihan = input("Masukkan pilihan: ")
 
-        if pilihan == 1:
+        if pilihan == "1":
             auth.login()
-        elif pilihan == 2:
+        elif pilihan == "2":
             auth.register()
-        elif pilihan == 3:
+        elif pilihan == "0":
             break
         else:
-            print("")
+            print("Pilihan tidak valid!")
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
