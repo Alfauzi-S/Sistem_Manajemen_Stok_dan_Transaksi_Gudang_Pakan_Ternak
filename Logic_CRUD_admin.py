@@ -1,13 +1,13 @@
 import data_program as dpm
 import display_menu as dmn
 import Essential_tools as tool
-import Essential_hendling_error as err
+import Essential_hendling_error as ehr
 
 def create():
     tool.clear()
     print(f"{'='*18}{'TAMBAH PRODUK BARU'}{'='*18}")
     
-    id_baru = err.tidak_kosong("Masukkan ID Produk baru (cth: A7): ").upper() 
+    id_baru = ehr.tidak_kosong("Masukkan ID Produk baru (cth: A7): ").upper() 
     
     #cek id
     if id_baru in dpm.data_produk:
@@ -16,13 +16,13 @@ def create():
         #tersedia
         print(f"ID {id_baru} tersedia. Silakan masukkan detail produk:")
         
-        nama = err.tidak_kosong("Nama Produk        : ")
-        stok = err.harus_nomor("Stok Awal          : ")
-        ukuran = err.tidak_kosong("Ukuran/per stok             : ")
-        harga = err.harus_nomor("Harga              : ")
-        kategori = err.input_kategori("Kategori           : ")
-        tgl_masuk = err.input_tanggal("Tanggal Masuk (YYYY-MM-DD: ")
-        kadaluarsa = err.input_tanggal("Kadaluarsa (YYYY-MM-DD): ")
+        nama = ehr.tidak_kosong("Nama Produk        : ")
+        stok = ehr.harus_nomor("Stok Awal          : ")
+        ukuran = ehr.tidak_kosong("Ukuran/per stok             : ")
+        harga = ehr.harus_nomor("Harga              : ")
+        kategori = ehr.input_kategori("Kategori           : ")
+        tgl_masuk = ehr.input_tanggal("Tanggal Masuk (YYYY-MM-DD: ")
+        kadaluarsa = ehr.input_tanggal("Kadaluarsa (YYYY-MM-DD): ")
         
         data_baru = {
             "nama produk": nama,

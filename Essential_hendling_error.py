@@ -1,7 +1,6 @@
 from datetime import datetime
 
 def tidak_kosong(prompt):
-    """Memastikan input string tidak boleh kosong."""
     while True:
         input_str = input(prompt).strip()
         if input_str:
@@ -10,7 +9,6 @@ def tidak_kosong(prompt):
             print("Input tidak boleh kosong.")
 
 def harus_nomor(prompt):
-    """Memastikan input adalah angka positif."""
     while True:
         input_str = input(prompt).strip()
         try:
@@ -23,7 +21,6 @@ def harus_nomor(prompt):
             print("Input harus berupa angka.")
 
 def input_tanggal(prompt, bisa_kosong=False):
-    """Memvalidasi input tanggal format YYYY-MM-DD."""
     while True:
         tgl_str = input(prompt).strip()
         
@@ -43,7 +40,6 @@ def input_tanggal(prompt, bisa_kosong=False):
             print("Format tanggal salah. (YYYY-MM-DD)")
 
 def input_kategori(prompt, bisa_kosong=False):
-    """Memvalidasi input kategori."""
     kategori_valid = ['ruminansia', 'unggas', 'perikanan', 'hewan peliharaan']
     print(f"Pilihan Kategori: {', '.join(kategori_valid)}")
     
@@ -58,12 +54,10 @@ def input_kategori(prompt, bisa_kosong=False):
             print(f"Kategori tidak valid. Pilih dari: {', '.join(kategori_valid)}")
 
 def input_string_kosong(prompt, default_value):
-    """Untuk update: Mengembalikan nilai baru, atau nilai lama jika dikosongi."""
     input_str = input(prompt).strip()
     return input_str if input_str else default_value
 
 def input_angka_kosong(prompt, default_value):
-    """Untuk update: Mengembalikan angka baru, atau nilai lama jika dikosongi."""
     input_str = input(prompt).strip()
     if not input_str:
         return default_value
