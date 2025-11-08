@@ -6,7 +6,6 @@ import Essential_hendling_error as ehr
 def create():
     tool.clear()
     print(f"{'='*18}{'TAMBAH PRODUK BARU'}{'='*18}")
-    
     id_baru = ehr.tidak_kosong("Masukkan ID Produk baru (cth: A7): ").upper() 
     
     #cek id
@@ -15,7 +14,6 @@ def create():
     else:
         #tersedia
         print(f"ID {id_baru} tersedia. Silakan masukkan detail produk:")
-        
         nama = ehr.tidak_kosong("Nama Produk        : ")
         stok = ehr.harus_nomor("Stok Awal          : ")
         ukuran = ehr.tidak_kosong("Ukuran/per stok             : ")
@@ -33,15 +31,17 @@ def create():
             "tanggal masuk": tgl_masuk,
             "kategori": kategori
         }
-        
         dpm.data_produk[id_baru] = data_baru
             
         print(f"\nData Pakan '{nama}' (ID: {id_baru}) berhasil ditambahkan!")
     
-    input('kembali ke menu admin...')
+    input('< kembali(0) ')
 
 def read():
-    print("")
+    tool.clear()
+    print(f"{'='*18}{'LIHAT DAFTAR GUDANG'}{'='*18}")
+    dmn.menu_produk
+    input('< kembali(0) ')
 
 def update():
     print("")
