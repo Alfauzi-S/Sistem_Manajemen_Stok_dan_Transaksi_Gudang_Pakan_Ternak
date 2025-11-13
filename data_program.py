@@ -1,101 +1,102 @@
 # nested Dictionary
 data_users = {
-    "admin" : {"password" : "123", "peran" : "admin"},
-    "juragan" : {"password" : "piton", "peran" : "admin"},
-    "peternak" : {"password" : "pembeli", "peran" : "user"}
+    "Admin" : {"password" : "123", "peran" : "admin"},
+    "Juragan" : {"password" : "piton", "peran" : "admin"},
+    "Peternak" : {"password" : "pembeli", "peran" : "user"},
+    "Siti" : {"password" : "user", "peran" : "user"}
     }
 
 # nested Dictionary
 data_produk = {
-    "A1": {
-        "nama produk": "Pakan Sapi Potong",
-        "stok": 120,
-        "ukuran/per stok": "50 kg",
-        "harga": 150000,
-        "kadaluarsa": "2026-08-15",
-        "tanggal masuk": "2025-11-01",
-        "kategori": "Ruminansia"
+    1: {
+        "Nama Produk": "Pakan Sapi Potong",
+        "Stok": 120,
+        "Ukuran/per Stok": "50 kg",
+        "Harga": 150000,
+        "Kadaluarsa": "2026-08-15",
+        "Tanggal Masuk": "2025-11-01",
+        "Kategori": "Ruminansia"
     },
-    "A2": {
-        "nama produk": "Pakan Sapi Perah",
-        "stok": 100,
-        "ukuran/per stok": "50 kg",
-        "harga": 160000,
-        "kadaluarsa": "2026-09-10",
-        "tanggal masuk": "2025-11-02",
-        "kategori": "Ruminansia"
+    2: {
+        "Nama Produk": "Pakan Sapi Perah",
+        "Stok": 100,
+        "Ukuran/per Stok": "50 kg",
+        "Harga": 160000,
+        "Kadaluarsa": "2026-09-10",
+        "Tanggal Masuk": "2025-11-02",
+        "Kategori": "Ruminansia"
     },
-    "A3": {
-        "nama produk": "Pakan Ayam Broiler",
-        "stok": 200,
-        "ukuran/per stok": "25 kg",
-        "harga": 95000,
-        "kadaluarsa": "2026-05-20",
-        "tanggal masuk": "2025-11-03",
-        "kategori": "Unggas"
+    3: {
+        "Nama Produk": "Pakan Ayam Broiler",
+        "Stok": 200,
+        "Ukuran/per Stok": "25 kg",
+        "Harga": 95000,
+        "Kadaluarsa": "2026-05-20",
+        "Tanggal Masuk": "2025-11-03",
+        "Kategori": "Unggas"
     },
-    "A4": {
-        "nama produk": "Pakan Ayam Layer",
-        "stok": 180,
-        "ukuran/per stok": "25 kg",
-        "harga": 90000,
-        "kadaluarsa": "2026-06-05",
-        "tanggal masuk": "2025-11-04",
-        "kategori": "Unggas"
+    4: {
+        "Nama Produk": "Pakan Ayam Layer",
+        "Stok": 180,
+        "Ukuran/per Stok": "25 kg",
+        "Harga": 90000,
+        "Kadaluarsa": "2026-06-05",
+        "Tanggal Masuk": "2025-11-04",
+        "Kategori": "Unggas"
     },
-    "A5": {
-        "nama produk": "Pakan Ikan Lele",
-        "stok": 300,
-        "ukuran/per stok": "20 kg",
-        "harga": 70000,
-        "kadaluarsa": "2026-10-12",
-        "tanggal masuk": "2025-11-05",
-        "kategori": "Perikanan"
+    5: {
+        "Nama Produk": "Pakan Ikan Lele",
+        "Stok": 300,
+        "Ukuran/per Stok": "20 kg",
+        "Harga": 70000,
+        "Kadaluarsa": "2026-10-12",
+        "Tanggal Masuk": "2025-11-05",
+        "Kategori": "Perikanan"
     },
-    "A6": {
-        "nama produk": "Pakan Bebek Pedaging",
-        "stok": 90,
-        "ukuran/per stok": "25 kg",
-        "harga": 85000,
-        "kadaluarsa": "2026-07-25",
-        "tanggal masuk": "2025-11-06",
-        "kategori": "Unggas"
+    6: {
+        "Nama Produk": "Pakan Bebek Pedaging",
+        "Stok": 90,
+        "Ukuran/per Stok": "25 kg",
+        "Harga": 85000,
+        "Kadaluarsa": "2026-07-25",
+        "Tanggal Masuk": "2025-11-06",
+        "Kategori": "Unggas"
     },
 
-    "B1": {
-        "nama produk": "Pakan Burung Lovebird",
-        "stok": 50,
-        "ukuran/per stok": "5 kg",
-        "harga": 45000,
-        "kadaluarsa": "2026-04-30",
-        "tanggal masuk": "2025-11-07",
-        "kategori": "Hewan Peliharaan"
+    7: {
+        "Nama Produk": "Pakan Burung Lovebird",
+        "Stok": 50,
+        "Ukuran/per Stok": "5 kg",
+        "Harga": 45000,
+        "Kadaluarsa": "2026-04-30",
+        "Tanggal Masuk": "2025-11-07",
+        "Kategori": "Hewan Peliharaan"
     },
-    "B2": {
-        "nama produk": "Pakan Kelinci",
-        "stok": 60,
-        "ukuran/per stok": "10 kg",
-        "harga": 50000,
-        "kadaluarsa": "2026-05-15",
-        "tanggal masuk": "2025-11-08",
-        "kategori": "Hewan Peliharaan"
+    8: {
+        "Nama Produk": "Pakan Kelinci",
+        "Stok": 60,
+        "Ukuran/per Stok": "10 kg",
+        "Harga": 50000,
+        "Kadaluarsa": "2026-05-15",
+        "Tanggal Masuk": "2025-11-08",
+        "Kategori": "Hewan Peliharaan"
     },
-    "B3": {
-        "nama produk": "Pakan Hamster",
-        "stok": 40,
-        "ukuran/per stok": "5 kg",
-        "harga": 40000,
-        "kadaluarsa": "2026-06-20",
-        "tanggal masuk": "2025-11-09",
-        "kategori": "Hewan Peliharaan"
+    9: {
+        "Nama Produk": "Pakan Hamster",
+        "Stok": 40,
+        "Ukuran/per Stok": "5 kg",
+        "Harga": 40000,
+        "Kadaluarsa": "2026-06-20",
+        "Tanggal Masuk": "2025-11-09",
+        "Kategori": "Hewan Peliharaan"
     },
-    "B4": {
-        "nama produk": "Pakan Ikan Hias",
-        "stok": 75,
-        "ukuran/per stok": "20 kg",
-        "harga": 55000,
-        "kadaluarsa": "2026-08-05",
-        "tanggal masuk": "2025-11-10",
-        "kategori": "Hewan Peliharaan"
+    10: {
+        "Nama Produk": "Pakan Ikan Hias",
+        "Stok": 75,
+        "Ukuran/per Stok": "20 kg",
+        "Harga": 55000,
+        "Kadaluarsa": "2026-08-05",
+        "Tanggal Masuk": "2025-11-10",
+        "Kategori": "Hewan Peliharaan"
     }
 }
