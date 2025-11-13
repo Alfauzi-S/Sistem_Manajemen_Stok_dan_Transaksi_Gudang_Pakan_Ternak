@@ -1,0 +1,50 @@
+id_transaksi,nama_pembeli,tanggal_pembelian,total_bayar,id_produk,nama_produk,jumlah_yang_dibeli
+012,Bagas,2025-11-01,320000,2,Pakan Sapi Perah,2
+018,Dinda,2025-11-01,250000,8,Pakan Kelinci,5
+023,Rudi,2025-11-02,950000,3,Pakan Ayam Broiler,10
+024,Siti,2025-11-02,900000,4,Pakan Ayam Layer,10
+025,Agus,2025-11-02,700000,5,Pakan Ikan Lele,10
+036,Fitri,2025-11-03,255000,6,Pakan Bebek Pedaging,3
+037,Andi,2025-11-03,45000,7,Pakan Burung Lovebird,1
+039,Rio,2025-11-03,80000,9,Pakan Hamster,2
+0410,Putri,2025-11-04,550000,10,Pakan Ikan Hias,10
+054,Hendra,2025-11-05,450000,4,Pakan Ayam Layer,5
+055,Rahma,2025-11-05,700000,5,Pakan Ikan Lele,10
+056,Budi,2025-11-05,255000,6,Pakan Bebek Pedaging,3
+057,Siti,2025-11-05,135000,7,Pakan Burung Lovebird,3
+059,Fahri,2025-11-05,160000,9,Pakan Hamster,4
+061,Bagas,2025-11-06,750000,1,Pakan Sapi Potong,5
+062,Andi,2025-11-06,160000,2,Pakan Sapi Perah,1
+063,Rara,2025-11-06,475000,3,Pakan Ayam Broiler,5
+068,Dinda,2025-11-06,250000,8,Pakan Kelinci,5
+0710,Agus,2025-11-07,1100000,10,Pakan Ikan Hias,20
+084,Putri,2025-11-08,720000,4,Pakan Ayam Layer,8
+085,Fitri,2025-11-08,490000,5,Pakan Ikan Lele,7
+086,Galuh,2025-11-08,595000,6,Pakan Bebek Pedaging,7
+087,Rini,2025-11-08,315000,7,Pakan Burung Lovebird,7
+089,Anwar,2025-11-08,160000,9,Pakan Hamster,4
+092,Bima,2025-11-09,320000,2,Pakan Sapi Perah,2
+095,Maya,2025-11-09,1050000,5,Pakan Ikan Lele,15
+099,Roni,2025-11-09,160000,9,Pakan Hamster,4
+101,Bagas,2025-11-10,300000,1,Pakan Sapi Potong,2
+103,Siti,2025-11-10,950000,3,Pakan Ayam Broiler,10
+105,Rudi,2025-11-10,1400000,5,Pakan Ikan Lele,20
+106,Rudi,2025-11-10,1275000,6,Pakan Bebek Pedaging,15
+107,Siti,2025-11-10,360000,7,Pakan Burung Lovebird,8
+109,Siti,2025-11-10,240000,9,Pakan Hamster,6
+112,Agus,2025-11-11,800000,2,Pakan Sapi Perah,5
+115,Fitri,2025-11-11,350000,5,Pakan Ikan Lele,5
+118,Dinda,2025-11-11,500000,8,Pakan Kelinci,10
+121,Rara,2025-11-12,405000,7,Pakan Burung Lovebird,9
+124,Anwar,2025-11-12,900000,4,Pakan Ayam Layer,10
+125,Anwar,2025-11-12,700000,5,Pakan Ikan Lele,10
+127,Fahri,2025-11-12,160000,2,Pakan Sapi Perah,1
+129,Fahri,2025-11-12,240000,9,Pakan Hamster,6
+154,Agus,2025-11-15,1080000,4,Pakan Ayam Layer,12
+155,Agus,2025-11-15,1750000,5,Pakan Ikan Lele,25
+172,Fitri,2025-11-17,800000,2,Pakan Sapi Perah,5
+178,Fitri,2025-11-17,250000,8,Pakan Kelinci,5
+181,Andi,2025-11-18,1500000,1,Pakan Sapi Potong,10
+193,Rio,2025-11-19,950000,3,Pakan Ayam Broiler,10
+199,Rio,2025-11-19,160000,9,Pakan Hamster,4
+205,Putri,2025-11-20,1400000,5,Pakan Ikan Lele,20
