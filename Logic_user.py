@@ -1,6 +1,8 @@
 import pandas as pd 
 import tabulate as tb
 import Essential_tools as tool 
+import data_program as dpm
+import Essential_hendling_error as ehr
 
 def belanja():
     print("belanja")
@@ -14,8 +16,33 @@ def ubah_keranjang():
 def hapus_keranjang():
     print("")
 
-def topup():
-    print("")
+def topup(username_login):
+    tool.clear()
+    print(f"{'='*18}{'ISI SALDO'}{'='*18}")
+    saldo_sekarang = dpm.data_users[username_login].get('saldo', 0)
+    print(f'Username: {username_login}')
+    print(f'Saldo Anda saat ini: Rp{saldo_sekarang:,}')
+    print('-' * 42)
+    konfirmasi = input('Apakah anda ingin top up? (y/n): ').strip().lower()
+
+    if konfirmasi != 'y':
+        input('< kembali(enter) ')
+        return
+    else:
+        print('Masukkan password Anda')
+    password_input = input('Masukkan Password: ')
+
+    if password_input != dpm.data_users[username_login]['password']:
+            print('Password salah! Top up gagal.')
+            input('< kembali(enter) ')
+            return
+
+    jumlah_topup = ehr.harus_nomor('Masukkan jumlah top up (Rp): ')
+    dpm.data_users[username_login]['saldo'] += jumlah_topup
+    saldo_baru = dpm.data_users[username_login]['saldo']
+    print(f'Top up berhasil!')
+    print(f'Saldo Anda sekarang: Rp{saldo_baru:,}')
+    input('< kembali(enter) ')
 
 def history(username):
     tool.clear()
