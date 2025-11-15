@@ -107,7 +107,8 @@ def update():
     input('< kembali(Enter) ')
 
 def delate():
-    print("")
+    dmn.menu_produk
+    
 
 def history():
     tool.clear()
