@@ -1,9 +1,10 @@
 # nested Dictionary
 data_users = {
-    "Admin" : {"password" : "123", "peran" : "admin", "saldo": False},
-    "Juragan" : {"password" : "piton", "peran" : "admin", "saldo": False},
+    "Admin" : {"password" : "123", "peran" : "admin"},
+    "Juragan" : {"password" : "piton", "peran" : "admin"},
     "Peternak" : {"password" : "pembeli", "peran" : "user", "saldo": 500000},
-    "Siti" : {"password" : "user", "peran" : "user", "saldo": 300000}
+    "Siti" : {"password" : "user", "peran" : "user", "saldo": 300000},
+    "User" : {"password" : "user", "peran" : "user"}
     }
 
 # nested Dictionary

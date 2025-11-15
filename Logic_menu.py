@@ -43,7 +43,7 @@ def menu_user(username):
         elif pilihan == 4:
             lusr.hapus_keranjang()
         elif pilihan == 5:
-            lusr.topup()
+            lusr.topup(username)
         elif pilihan == 6:
             lusr.history(username)
         elif pilihan == 0:

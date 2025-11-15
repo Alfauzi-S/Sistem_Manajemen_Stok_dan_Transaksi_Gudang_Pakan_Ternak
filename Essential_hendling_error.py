@@ -45,3 +45,11 @@ def input_tanggal(p):
             return tgl_str
         except ValueError:
             print("Format tanggal salah. (YYYY-MM-DD)")
+
+def input_y_or_n(p):
+    while True:
+        input_str = tidak_kosong(p).strip().lower()
+        if input_str in ['y', 'n']:
+            return input_str
+        else:
+            print("Input harus 'y' atau 'n'.")

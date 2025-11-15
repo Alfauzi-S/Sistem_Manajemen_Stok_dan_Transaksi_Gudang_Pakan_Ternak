@@ -116,6 +116,7 @@ def history():
         print(f"│{'HISTORY TRANSAKSI':^123}│")
         print(f"└{'─'*123}┘")
         history = pd.read_csv("history_transaksi.csv")
+        history["total_bayar"] = history["total_bayar"].apply(lambda x: f"Rp{x:,}")
         headers = ["ID Transaksi", "Nama Pembeli", "Tanggal Pembelian", "Total Bayar", "ID Produk", "Nama Produk", "Jumlah yang dibeli"]
         print(tb.tabulate(history, headers=headers, tablefmt="simple", showindex=False))
         print('─'*125)
@@ -127,3 +128,5 @@ def history():
         print(f"erjadi kesalahan: {e}")
 
     input('< kembali(enter) ')
+
+history()
