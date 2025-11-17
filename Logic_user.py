@@ -15,13 +15,13 @@ def belanja(username):
         konfirmasi = ehr.input_y_or_n("Apakah Anda ingin membeli produk? (y/n): ")
         if konfirmasi == 'y':
             id = ehr.harus_nomor("Masukkan ID produk yang ingin dibeli: ")
-            if id in dpm.data_produk:
+            if id in dpm.data_produk and dpm.data_produk[id]['Stok'] > 0:
                 print(f"Anda memilih produk: {dpm.data_produk[id]['Nama Produk']}")
                 print(f"Stok tersedia: {dpm.data_produk[id]['Stok']}")
 
                 while True:
                     jumlah = ehr.harus_nomor("Masukkan jumlah yang ingin dibeli: ")
-                    if jumlah <= dpm.data_produk[id]['Stok']:
+                    if jumlah <= dpm.data_produk[id]['Stok'] and dpm.data_produk[id]['Stok'] > 0:
                         while True:
                             konfirmasi = ehr.input_y_or_n(f"Apakah Anda yakin ingin membeli {jumlah} x {dpm.data_produk[id]['Nama Produk']}? (y/n): ")
 
@@ -50,6 +50,10 @@ def belanja(username):
                                 return None
                     else:
                         input('< Stok tidak mencukupi, coba lagi(enter) ')
+            elif dpm.data_produk[id]['Stok'] <= 0:
+                print(f"Maaf, stok {dpm.data_produk[id]['Nama Produk']} sedang habis.")
+                input('< kembali(enter) ')
+                return None
             else:
                 print(f"Produk dengan ID {id} tidak ditemukan.")
                 input('< kembali(enter) ')
