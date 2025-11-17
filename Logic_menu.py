@@ -35,13 +35,13 @@ def menu_user(username):
         print(dmn.menu_user)
         pilihan = ehr.input_menu('masukan pilihan: ')
         if pilihan == 1:
-            lusr.belanja()
+            lusr.belanja(username)
         elif pilihan == 2:
-            lusr.keranjang()
+            lusr.keranjang(username)
         elif pilihan == 3:
-            lusr.ubah_keranjang()
+            lusr.ubah_keranjang(username)
         elif pilihan == 4:
-            lusr.hapus_keranjang()
+            lusr.hapus_keranjang(username)
         elif pilihan == 5:
             lusr.topup(username)
         elif pilihan == 6:

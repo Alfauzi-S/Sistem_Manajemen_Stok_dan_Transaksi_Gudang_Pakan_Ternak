@@ -34,7 +34,6 @@ menu_user = tb.tabulate(menu_user_data, headers=['Pilihan', 'Deskripsi'.ljust(33
 
 
 def menu_produk():
-    headers = ["ID", "Nama Produk", "Stok", "Ukuran/Stok", "Harga", "Kadaluarsa", "Tanggal Masuk", "Kategori"]
     table_data = []
     for ID, info in dpm.data_produk.items():
         table_data.append([
@@ -47,7 +46,20 @@ def menu_produk():
             info["Tanggal Masuk"],
             info["Kategori"]
         ])
-    print(tb.tabulate(table_data, headers=headers, tablefmt="fancy_grid"))
+    print(tb.tabulate(table_data, headers=["ID", "Nama Produk", "Stok", "Ukuran/Stok", "Harga", "Kadaluarsa", "Tanggal Masuk", "Kategori"], tablefmt="rounded_grid", colalign=("center", "left", "center", "center", "right", "center", "center", "left")))
+
+
+def tabel_keranjang(keranjang_user):
+    data_tabel = []
+    for id_produk, item in keranjang_user.items():
+        baris = [
+            id_produk,
+            item['nama_produk'],
+            item['jumlah'],
+            f"Rp {item['harga_satuan']:,}",
+        ]
+        data_tabel.append(baris)
+    print(tb.tabulate(data_tabel, headers=["ID produk", "Nama Produk", "Jumlah", "Harga Satuan"], tablefmt="rounded_grid", colalign=("center", "left", "center", "right")))
 
 
 menu_visualisai_data =[
