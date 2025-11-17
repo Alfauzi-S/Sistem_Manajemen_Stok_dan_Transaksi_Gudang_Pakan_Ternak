@@ -11,7 +11,7 @@ data_users = {
 data_produk = {
     1: {
         "Nama Produk": "Pakan Sapi Potong",
-        "Stok": 120,
+        "Stok": 110,
         "Ukuran/per Stok": "50 kg",
         "Harga": 150000,
         "Kadaluarsa": "2026-08-15",
@@ -93,7 +93,7 @@ data_produk = {
     },
     10: {
         "Nama Produk": "Pakan Ikan Hias",
-        "Stok": 75,
+        "Stok": 0,
         "Ukuran/per Stok": "20 kg",
         "Harga": 55000,
         "Kadaluarsa": "2026-08-05",
