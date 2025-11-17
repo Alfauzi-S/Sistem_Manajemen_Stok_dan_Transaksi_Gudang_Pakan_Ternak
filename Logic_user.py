@@ -1,5 +1,3 @@
-import csv
-from datetime import datetime
 import pandas as pd 
 import tabulate as tb
 import Essential_tools as tool 
@@ -50,17 +48,16 @@ def belanja(username):
                                 return None
                     else:
                         input('< Stok tidak mencukupi, coba lagi(enter) ')
-            elif dpm.data_produk[id]['Stok'] <= 0:
+            elif id in dpm.data_produk and dpm.data_produk[id]['Stok'] <= 0:
                 print(f"Maaf, stok {dpm.data_produk[id]['Nama Produk']} sedang habis.")
                 input('< kembali(enter) ')
                 return None
-            else:
+            elif id not in dpm.data_produk:
                 print(f"Produk dengan ID {id} tidak ditemukan.")
                 input('< kembali(enter) ')
                 return None
         elif konfirmasi == 'n':
             return None
-
 
 def keranjang(username):
     while True:
