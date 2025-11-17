@@ -7,7 +7,7 @@ def login():
     while True:
         tool.clear()
         print((f'{'='*18}{'HALAMAN LOGIN'}{'='*18}'))
-        username = ehr.tidak_kosong_capitalize('Masukkan Username: ')
+        username = ehr.tidak_kosong('Masukkan Username: ').lower()
         password = ehr.tidak_kosong('Masukkan Password: ')
 
         if username in dpm.data_users and dpm.data_users[username]['password'] == password:

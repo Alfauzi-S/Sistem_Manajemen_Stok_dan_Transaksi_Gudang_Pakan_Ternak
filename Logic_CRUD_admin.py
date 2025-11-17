@@ -128,5 +128,3 @@ def history():
         print(f"erjadi kesalahan: {e}")
 
     input('< kembali(enter) ')
-
-history()

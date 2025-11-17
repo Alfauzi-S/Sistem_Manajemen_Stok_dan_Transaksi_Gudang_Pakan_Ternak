@@ -47,4 +47,5 @@ id_transaksi,nama_pembeli,tanggal_pembelian,total_bayar,id_produk,nama_produk,ju
 181,Andi,2025-11-18,1500000,1,Pakan Sapi Potong,10
 193,Rio,2025-11-19,950000,3,Pakan Ayam Broiler,10
 199,Rio,2025-11-19,160000,9,Pakan Hamster,4
-205,Putri,2025-11-20,1400000,5,Pakan Ikan Lele,20
+205,Putri,2025-11-20,1400000,5,Pakan Ikan Lele,2
+1710,user,2025-11-17,4125000,10,Pakan Ikan Hias,75
