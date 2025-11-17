@@ -107,7 +107,20 @@ def update():
     input('< kembali(Enter) ')
 
 def delate():
-    print("")
+    dmn.menu_produk()
+    
+    id_produk = input("Masukkan ID produk yang mau dihapus: ")
+
+    if id_produk not in dpm.data_produk:
+        print("ID tidak ada.")
+        return
+    
+    konfirmasi = input("Hapus produk? (y/n): ").lower()
+    if konfirmasi == 'y':
+        del dpm.data_produk[id_produk]
+        print("Produk berhasil dihapus!")
+    else:
+        print("Penghapusan dibatalkan.")
 
 def history():
     tool.clear()
