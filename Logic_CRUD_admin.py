@@ -4,6 +4,8 @@ import data_program as dpm
 import display_menu as dmn
 import Essential_tools as tool
 import Essential_hendling_error as ehr
+from colorama import init, Fore, Style
+init(autoreset=True)
 
 def create():
     tool.clear()
@@ -125,19 +127,23 @@ def delate():
 def history():
     tool.clear()
     try:
-        print(f"┌{'─'*123}┐")
-        print(f"│{'HISTORY TRANSAKSI':^123}│")
-        print(f"└{'─'*123}┘")
-        history = pd.read_csv("history_transaksi.csv")
-        history["total_bayar"] = history["total_bayar"].apply(lambda x: f"Rp{x:,}")
-        headers = ["ID Transaksi", "Nama Pembeli", "Tanggal Pembelian", "Total Bayar", "ID Produk", "Nama Produk", "Jumlah yang dibeli"]
-        print(tb.tabulate(history, headers=headers, tablefmt="simple", showindex=False))
-        print('─'*125)
+        print(f"┌{'─'*96}┐")
+        print(f"│" + Fore.YELLOW + 'HISTORY TRANSAKSI USER'.center(96) + Style.RESET_ALL + "│")
+        print(f"└{'─'*96}┘")
+
+        df = pd.read_csv("history_transaksi.csv")
+        
+        if not df.empty:
+            print(df.to_string(index=False)) 
+        else:
+            print(Fore.RED + 'Tidak ada data History')
 
     except FileNotFoundError:
-        print("File 'history_transaksi.csv' tidak ditemukan.")
-
+        print(Fore.RED + "File 'history_transaksi.csv' tidak ditemukan.")
+    except KeyError as e:
+        print(Fore.RED + f"Kolom tidak ditemukan di CSV: {e}")
     except Exception as e:
-        print(f"erjadi kesalahan: {e}")
-
-    input('< kembali(enter) ')
+        print(Fore.RED + f"Terjadi kesalahan: {e}")
+    finally:
+        print('─'*98)
+        input('< kembali(enter) ')
