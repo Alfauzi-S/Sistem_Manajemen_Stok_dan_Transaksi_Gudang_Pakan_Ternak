@@ -1,11 +1,33 @@
 # nested Dictionary
 data_users = {
-    "admin" : {"password" : "123", "peran" : "admin"},
-    "juragan" : {"password" : "piton", "peran" : "admin"},
-    "peternak" : {"password" : "pembeli", "peran" : "user", "saldo": 500000},
-    "siti" : {"password" : "user", "peran" : "user", "saldo": 300000},
-    "user" : {"password" : "user", "peran" : "user", "saldo": 9999999999, "keranjang" : {1 : {"nama_produk" : "Pakan Sapi Potong", "jumlah" : 10, "harga_satuan" : 150000}, 2 : {"nama_produk" : "Pakan Ayam Broiler", "jumlah" : 5, "harga_satuan" : 95000}}}
-    }
+    "admin": {"password": "123", "peran": "admin"},
+    "juragan": {"password": "piton", "peran": "admin"},
+    "siti": {"password": "user", "peran": "user", "saldo": 300000},
+    "bagas": {"password": "user", "peran": "user", "saldo": 500000},
+    "dinda": {"password": "user", "peran": "user", "saldo": 500000},
+    "rudi": {"password": "user", "peran": "user", "saldo": 500000},
+    "fitri": {"password": "user", "peran": "user", "saldo": 500000},
+    "andi": {"password": "user", "peran": "user", "saldo": 500000},
+    "rio": {"password": "user", "peran": "user", "saldo": 500000},
+    "putri": {"password": "user", "peran": "user", "saldo": 500000},
+    "agus": {"password": "user", "peran": "user", "saldo": 500000},
+    "rahma": {"password": "user", "peran": "user", "saldo": 500000},
+    "budi": {"password": "user", "peran": "user", "saldo": 500000},
+    "fahri": {"password": "user", "peran": "user", "saldo": 500000},
+    "hendra": {"password": "user", "peran": "user", "saldo": 500000},
+    "rara": {"password": "user", "peran": "user", "saldo": 500000},
+    "galuh": {"password": "user", "peran": "user", "saldo": 500000},
+    "rini": {"password": "user", "peran": "user", "saldo": 500000},
+    "anwar": {"password": "user", "peran": "user", "saldo": 500000},
+    "bima": {"password": "user", "peran": "user", "saldo": 500000},
+    "maya": {"password": "user", "peran": "user", "saldo": 500000},
+    "roni": {"password": "user", "peran": "user", "saldo": 500000},
+    "user": {"password": "user", "peran": "user", "saldo": 9999999, "keranjang": {
+                                                                                1: {"nama_produk": "Pakan Sapi Potong", "jumlah": 10, "harga_satuan": 150000}, 
+                                                                                2: {"nama_produk": "Pakan Ayam Broiler", "jumlah": 5, "harga_satuan": 95000}
+                                                                                }},
+    "user2": {"password": "user", "peran": "user" }
+}
 
 # nested Dictionary
 data_produk = {

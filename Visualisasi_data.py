@@ -5,6 +5,9 @@ import data_program as dpm
 import Essential_tools as tool
 import Essential_hendling_error as ehr
 import display_menu as dmn
+from colorama import init, Fore, Style
+init(autoreset=True)
+
 
 def visualisasi_data():
     df = pd.read_csv("history_transaksi.csv")
@@ -28,9 +31,9 @@ def visualisasi_data():
 
     while True :
         tool.clear()
-        print(dmn.menu_visualisai)
-        pilihan = ehr.input_menu("masukan (1/2/0): ")
-        if pilihan == 1:
+        print(Fore.YELLOW + "="* 20 + " VISUALISASI DATA " + "="*20)
+        pilihan = dmn.menu_visualisasi()
+        if pilihan == "Produk Populer":
             rekap_populer = rekap.sort_values(by="jumlah_yang_dibeli", ascending=False)
 
             plt.figure(figsize=(10, 6))
@@ -43,7 +46,7 @@ def visualisasi_data():
             plt.tight_layout()
             plt.show()
 
-        elif pilihan == 2:
+        elif pilihan == "Pendapatan Per Produk":
             rekap_pendapatan = rekap.sort_values(by="pendapatan", ascending=False)
 
             plt.figure(figsize=(10, 6))
@@ -57,5 +60,5 @@ def visualisasi_data():
             plt.tight_layout()
             plt.show()
         
-        elif pilihan == 0:
+        elif pilihan == "Keluar":
             break
