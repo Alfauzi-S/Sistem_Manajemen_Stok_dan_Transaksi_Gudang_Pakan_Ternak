@@ -10,14 +10,6 @@ def tidak_kosong(p):
         else:
             print(Fore.RED + "Input tidak boleh kosong.")
 
-def tidak_kosong_capitalize(p):
-    while True:
-        input_str = input(p).strip().capitalize()
-        if input_str:
-            return input_str
-        else:
-            print(Fore.RED + "Input tidak boleh kosong.")
-
 def harus_nomor(p):
     while True:
         input_str = tidak_kosong(p)

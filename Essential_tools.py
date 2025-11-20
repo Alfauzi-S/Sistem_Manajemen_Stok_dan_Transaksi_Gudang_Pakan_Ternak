@@ -7,4 +7,4 @@ def clear():
     os.system('cls || clear')
 
 def history_belanja(username, keranjang_user, total_pembelian):
-    df = pd.read_csv('history_transaksi.csv')
+    print('')
