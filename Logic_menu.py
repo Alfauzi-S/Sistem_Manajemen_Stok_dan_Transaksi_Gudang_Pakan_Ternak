@@ -29,9 +29,14 @@ def menu_admin(username):
         elif pilihan == "Visualisasi Data":
             vs.visualisasi_data()
         elif pilihan == "Logout":
-            print('anda telah logout')
-            input('< (enter)')
-            break
+            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n:) ")
+            if konfirmasi == "y":
+                print('anda telah logout')
+                input('< (enter)')
+                break
+            elif konfirmasi == 'n':
+                print ("Membatalkan logout")
+
         elif pilihan is None:
             print(Fore.RED + "\nanda mengunakan ctrl + c." + Style.RESET_ALL)
             input('< (enter)')
@@ -62,22 +67,16 @@ def menu_user(username):
         elif pilihan == "History Transaksi":
             lusr.history(username)
         elif pilihan == "Logout":
-            print('anda telah logout')
-            input('< (enter)')
-            break
+            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n:) ")
+            if konfirmasi == "y":
+                print('anda telah logout')
+                input('< (enter)')
+                break
+            elif konfirmasi == 'n':
+                print ("Membatalkan logout")
         elif pilihan is None:
             print(Fore.RED + "\nanda mengunakan ctrl + c." + Style.RESET_ALL)
             input('< (enter)')
             break
         else:
             print('pilihan tidak valid')
-
-while True:
-    konfirmasi = input("Apakah yakin keluar? (y/n:) ")
-
-    if konfirmasi == "y":
-        print ("Terima Kasih.")
-        break
-
-    else:
-        print ("Membatalkan keluar")

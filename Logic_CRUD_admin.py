@@ -13,7 +13,7 @@ def create():
     print(Fore.YELLOW + f"{" TAMBAH PRODUK BARU ":=^50}")
     id_baru = ehr.harus_nomor("Masukkan ID Produk baru   : ")
     if id_baru not in dpm.data_produk:
-        produk = ehr.tidak_kosong_capitalize("Nama Produk               : ")
+        produk = ehr.tidak_kosong("Nama Produk               : ")
         stok = ehr.harus_nomor("Stok Awal                 : ")
         ukuran = ehr.harus_nomor("Ukuran/per stok (Kg)      : ")
         harga = ehr.harus_nomor("Harga                     : ")
@@ -69,7 +69,7 @@ def update():
         if id in dpm.data_produk:
             print(Fore.YELLOW + f"{f" Mengubah Data ID: {id} ":-^121}")
             produk_lama = dpm.data_produk[id]
-            nama = ehr.tidak_kosong_capitalize(f"'Nama ({produk_lama['Nama Produk']})': ")
+            nama = ehr.tidak_kosong(f"Nama ({produk_lama['Nama Produk']}): ")
             stok = ehr.harus_nomor(f"Stok ({produk_lama['Stok']}): ")
             ukuran = ehr.harus_nomor(f"Ukuran/per Stok ({produk_lama['Ukuran/per Stok']}: ")
             harga = ehr.harus_nomor(f"Harga (Rp{produk_lama['Harga']}: ")
