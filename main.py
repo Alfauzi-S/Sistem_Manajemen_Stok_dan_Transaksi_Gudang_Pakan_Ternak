@@ -18,12 +18,16 @@ def main():
         elif pilihan == 'Register':
             auth.register()
         elif pilihan == 'Keluar':
-            print('Terimakasih telah mengunakan program kami')
-            break
+            konfirmasi = input("Apakah yakin keluar? (y/n:) ")
+            if konfirmasi == "y":
+               print ("Terima Kasih.")
+               break
+            else:
+               print ("Membatalkan keluar")
         elif pilihan is None:
             print(Fore.RED + "\nKeluar dari program." + Style.RESET_ALL)
             break
-        else: 
+        else:
             print('pilihan tidak valid')
 
 if __name__ == "__main__":
