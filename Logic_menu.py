@@ -71,3 +71,13 @@ def menu_user(username):
             break
         else:
             print('pilihan tidak valid')
+
+while True:
+    konfirmasi = input("Apakah yakin keluar? (y/n:) ")
+
+    if konfirmasi == "y":
+        print ("Terima Kasih.")
+        break
+
+    else:
+        print ("Membatalkan keluar")
