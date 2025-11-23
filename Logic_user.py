@@ -197,7 +197,7 @@ def history(username):
         data = df[df["nama_pembeli"].str.lower() == username.lower()]
         
         if not data.empty:
-            print(df.to_string(index=False)) 
+            print(data.to_string(index=False)) 
         else:
             print(f"Tidak ada transaksi untuk user '{username}'.")
 
@@ -211,3 +211,5 @@ def history(username):
         print('─'*98)
         input('< kembali(enter) ')
 
+
+history('siti')

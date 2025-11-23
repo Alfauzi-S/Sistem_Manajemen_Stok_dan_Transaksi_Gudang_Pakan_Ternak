@@ -71,8 +71,8 @@ def update():
             produk_lama = dpm.data_produk[id]
             nama = ehr.tidak_kosong(f"Nama ({produk_lama['Nama Produk']}): ")
             stok = ehr.harus_nomor(f"Stok ({produk_lama['Stok']}): ")
-            ukuran = ehr.harus_nomor(f"Ukuran/per Stok ({produk_lama['Ukuran/per Stok']}: ")
-            harga = ehr.harus_nomor(f"Harga (Rp{produk_lama['Harga']}: ")
+            ukuran = ehr.harus_nomor(f"Ukuran/per Stok ({produk_lama['Ukuran/per Stok']}): ")
+            harga = ehr.harus_nomor(f"Harga (Rp{produk_lama['Harga']}): ")
             tgl_masuk = ehr.input_tanggal(f"Tgl Masuk ({produk_lama['Tanggal Masuk']}): ")
 
             while True:

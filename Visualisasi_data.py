@@ -5,7 +5,6 @@ def visualisasi_data():
     df = pd.read_csv('history_transaksi.csv')
 
     data_produk = df.groupby('nama_produk')['jumlah_yang_dibeli'].sum().reset_index()
-
     Produk = data_produk['nama_produk']
     jumlah = data_produk['jumlah_yang_dibeli']
 
