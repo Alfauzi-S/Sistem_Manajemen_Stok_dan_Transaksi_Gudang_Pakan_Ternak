@@ -141,7 +141,7 @@ def history():
         df = pd.read_csv("history_transaksi.csv")
         
         if not df.empty:
-            print(df.to_string(index=False)) 
+            print(df.to_string(index=False))
         else:
             print(Fore.RED + 'Tidak ada data History')
 
