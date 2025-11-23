@@ -19,7 +19,7 @@ def main():
         elif pilihan == 'Register':
             auth.register()
         elif pilihan == 'Keluar':
-            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n:) ")
+            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n): ")
             if konfirmasi == "y":
                 print ("Terima Kasih sudah mengunakan program kami.")
                 break

@@ -29,7 +29,7 @@ def menu_admin(username):
         elif pilihan == "Visualisasi Data":
             vs.visualisasi_data()
         elif pilihan == "Logout":
-            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n:) ")
+            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n): ")
             if konfirmasi == "y":
                 print('anda telah logout')
                 input('< (enter)')
@@ -67,7 +67,7 @@ def menu_user(username):
         elif pilihan == "History Transaksi":
             lusr.history(username)
         elif pilihan == "Logout":
-            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n:) ")
+            konfirmasi = ehr.input_y_or_n("Apakah yakin keluar? (y/n): ")
             if konfirmasi == "y":
                 print('anda telah logout')
                 input('< (enter)')

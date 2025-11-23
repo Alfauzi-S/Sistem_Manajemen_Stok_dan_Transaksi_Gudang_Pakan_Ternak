@@ -1,8 +1,7 @@
-import inquirer
+from InquirerPy import inquirer
 import tabulate as tb
 import data_program as dpm
-import colorama as colorama
-from colorama import Fore, Style
+import Essential_tools as tool
 
 def menu_awal():
     pilihan = [
@@ -10,18 +9,15 @@ def menu_awal():
         "Register",
         "Keluar"
     ]
-    questions = [
-        inquirer.List(
-            'pilihan',
-            message="Pilih Menu:",
-            choices=pilihan,
-            carousel=True
-        ),
-    ]
-    answers = inquirer.prompt(questions)
-    if answers is None:
+    result = inquirer.select(
+        message="Pilih Menu:",
+        choices=pilihan,
+        cycle=True
+    ).execute()
+
+    if result is None:
         return None
-    return answers['pilihan']
+    return result
 
 
 def menu_admin():
@@ -34,18 +30,15 @@ def menu_admin():
         "Visualisasi Data",
         "Logout"
     ]
-    questions = [
-        inquirer.List(
-            'pilihan',
-            message="Pilih Menu Admin",
-            choices=pilihan,
-            carousel=True
-        ),
-    ]
-    answers = inquirer.prompt(questions)
-    if answers is None:
+    result = inquirer.select(
+        message="Pilih Menu Admin",
+        choices=pilihan,
+        cycle=True
+    ).execute()
+
+    if result is None:
         return None
-    return answers['pilihan']
+    return result
 
 
 def menu_user():
@@ -58,39 +51,15 @@ def menu_user():
         "History Transaksi",
         "Logout"
     ]
-    questions = [
-        inquirer.List(
-            'pilihan',
-            message="Pilih Menu User",
-            choices=pilihan,
-            carousel=True
-        ),
-    ]
-    answers = inquirer.prompt(questions)
-    if answers is None:
+    result = inquirer.select(
+        message="Pilih Menu User",
+        choices=pilihan,
+        cycle=True
+    ).execute()
+
+    if result is None:
         return None
-    return answers['pilihan']
-
-
-def menu_visualisasi():
-    pilihan = [
-        "Produk Populer",
-        "Pendapatan Per Produk",
-        "Keluar"
-    ]
-    questions = [
-        inquirer.List(
-            'pilihan',
-            message="Pilih Menu Visualisasi Data",
-            choices=pilihan,
-            carousel=True
-        ),
-    ]
-    answers = inquirer.prompt(questions)
-    if answers is None:
-        return None
-    return answers['pilihan']
-
+    return result
 
 def menu_produk():
     table_data = []
