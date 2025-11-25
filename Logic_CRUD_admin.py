@@ -122,7 +122,7 @@ def update():
                 dpm.data_produk[id] = {
                     "Nama Produk": produk_lama['Nama Produk'] if not nama else nama, # jika kosong gunakan nilai lama
                     "Stok": produk_lama['Stok'] if stock is None else stock, # jika kosong gunakan nilai lamar
-                    "Ukuran/per Stok": produk_lama['Ukuran/per Stok'] if ukuran is None else str(ukuran) + "Kg", # jika kosong gunakan nilai lama
+                    "Ukuran/per Stok": produk_lama['Ukuran/per Stok'] if ukuran is None else str(ukuran) + " Kg", # jika kosong gunakan nilai lama
                     "Harga": produk_lama['Harga'] if harga is None else harga, # jika kosong gunakan nilai lama
                     "Kadaluarsa": produk_lama['Kadaluarsa'] if kadaluarsa is None else kadaluarsa, # jika kosong gunakan nilai lama
                     "Tanggal Masuk": tgl_masuk_akhir, # jika kosong gunakan nilai lama
