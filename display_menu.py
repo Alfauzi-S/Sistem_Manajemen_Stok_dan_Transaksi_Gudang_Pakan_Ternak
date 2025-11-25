@@ -1,7 +1,20 @@
-from InquirerPy import inquirer
+import questionary as qs
 import tabulate as tb
 import data_program as dpm
-import Essential_tools as tool
+
+# File ini berisi fungsi-fungsi untuk menampilkan menu interaktif dan tabel menggunakan questionary dan tabulate.
+# menu_awal() – Menampilkan menu awal (Login, Register, Keluar).
+# menu_admin() – Menampilkan menu admin.
+# menu_user() – Menampilkan menu user.
+# menu_produk() – Menampilkan daftar produk dalam bentuk tabel.
+# tabel_keranjang(keranjang_user) – Menampilkan isi keranjang belanja dalam bentuk tabel.
+
+custom_style = qs.Style([
+    ('pointer', 'fg:yellow'),  # Warna panah ">"
+    ('highlighted', 'fg:cyan'),  # Warna item yang disorot
+    ('answer', 'fg:green'),  # Warna jawaban akhir
+    ('text', 'fg:white'),  # Warna teks biasa
+])
 
 def menu_awal():
     pilihan = [
@@ -9,11 +22,13 @@ def menu_awal():
         "Register",
         "Keluar"
     ]
-    result = inquirer.select(
+    result = qs.select(
         message="Pilih Menu:",
         choices=pilihan,
-        cycle=True
-    ).execute()
+        use_shortcuts=True, # apa ini?
+        style=custom_style, # style
+        pointer="> " # kustom pointer
+    ).ask()
 
     if result is None:
         return None
@@ -30,11 +45,13 @@ def menu_admin():
         "Visualisasi Data",
         "Logout"
     ]
-    result = inquirer.select(
+    result = qs.select(
         message="Pilih Menu Admin",
         choices=pilihan,
-        cycle=True
-    ).execute()
+        use_shortcuts=True,
+        style=custom_style,
+        pointer="> "
+    ).ask()
 
     if result is None:
         return None
@@ -51,11 +68,13 @@ def menu_user():
         "History Transaksi",
         "Logout"
     ]
-    result = inquirer.select(
+    result = qs.select(
         message="Pilih Menu User",
         choices=pilihan,
-        cycle=True
-    ).execute()
+        use_shortcuts=True,
+        style=custom_style,
+        pointer="> "
+    ).ask()
 
     if result is None:
         return None
@@ -63,13 +82,13 @@ def menu_user():
 
 def menu_produk():
     table_data = []
-    for key_id, velues in dpm.data_produk.items():
+    for key_id, velues in dpm.data_produk.items(): # perulangan ambil item dari data produk
         table_data.append([
             key_id,
             velues["Nama Produk"],
             velues["Stok"],
             velues["Ukuran/per Stok"],
-            f"Rp{velues['Harga']:,}",
+            f"Rp{velues['Harga']:,}", # format ke rupiah
             velues["Kadaluarsa"],
             velues["Tanggal Masuk"],
             velues["Kategori"]
@@ -79,12 +98,13 @@ def menu_produk():
 
 def tabel_keranjang(keranjang_user):
     data_tabel = []
-    for key_id, velues in keranjang_user.items():
+    for key_id, velues in keranjang_user.items():# perulangan ambil item dari keranjang user
+        # simpan di varibel baris
         baris = [
             key_id,
             velues['nama_produk'],
             velues['jumlah'],
-            f"Rp {velues['harga_satuan']:,}",
+            f"Rp {velues['harga_satuan']:,}", # format ke rupiah
         ]
-        data_tabel.append(baris)
+        data_tabel.append(baris) # tambahkan baris di variabel data_tabel
     print(tb.tabulate(data_tabel, headers=["ID produk", "Nama Produk", "Jumlah", "Harga Satuan"], tablefmt="rounded_grid", colalign=("center", "left", "center", "right")))
