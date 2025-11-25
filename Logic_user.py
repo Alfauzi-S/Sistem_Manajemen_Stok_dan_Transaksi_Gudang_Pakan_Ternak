@@ -153,25 +153,25 @@ def ubah_keranjang(username):
 def hapus_keranjang(username):
     tool.clear()
     print(Fore.YELLOW + f"{" HAPUS KERANJANG ":=^64}")
-    keranjang_user = dpm.data_users[username].get('keranjang', {})
-    if keranjang_user:
+    keranjang_user = dpm.data_users[username].get('keranjang', {}) # ambil nilai keranjang
+    if keranjang_user: # Jika keranjang tidak kosong
         dmn.tabel_keranjang(keranjang_user)
-        konfirmasi = ehr.input_y_or_n("Apakah anda ingin menghapus item di keranjang? (y/n): ")
-        if konfirmasi == 'y':
+        konfirmasi = ehr.input_y_or_n("Apakah anda ingin menghapus item di keranjang?")
+        if konfirmasi: # jika true
             id = ehr.harus_nomor("Masukkan ID produk yang ingin diubah: ")
             if id in keranjang_user:
                 print(f"Anda memilih produk: {keranjang_user[id]['nama_produk']}")
-                konfirmasi = ehr.input_y_or_n(f"Apakah Anda yakin ingin menghapus {keranjang_user[id]['nama_produk']} dari keranjang? (y/n): ")
-                if konfirmasi == 'y':   
-                    del keranjang_user[id]
+                konfirmasi = ehr.input_y_or_n(f"Apakah Anda yakin ingin menghapus {keranjang_user[id]['nama_produk']} dari keranjang?")
+                if konfirmasi: #jika true   
+                    del keranjang_user[id] # hapus data 
                     print(Fore.CYAN + "Produk dihapus dari keranjang Anda.")
-                elif konfirmasi == 'n':
+                else: #jika false
                     print("Membatalkan penghapusan.")
-            else:
+            else: 
                 print(Fore.RED + f"Produk dengan ID {id} tidak ditemukan.")
-        elif konfirmasi == 'n':
+        else: # jika false
             print('keluar dari menu hapus keranjang')
-    else:
+    else: # jika keranjang kosong
         print(Fore.RED + "Keranjang Anda kosong.")
     input('< kembali(enter) ')
 
@@ -187,7 +187,7 @@ def topup(username):
 
     konfirmasi = ehr.input_y_or_n('Apakah anda ingin top up? ')
     if konfirmasi: # jika true
-        password = ehr.tidak_kosong('Masukkan Password : ')
+        password = ehr.password('Masukkan Password : ')
         if username in dpm.data_users and dpm.data_users[username]['password'] == password: # cek apakah password benar
             jumlah_topup = ehr.harus_nomor('Masukkan jumlah top up (Rp) : ')
             saldo_sekarang += jumlah_topup # tambah jumlah_topup ke saldo_sekarang
