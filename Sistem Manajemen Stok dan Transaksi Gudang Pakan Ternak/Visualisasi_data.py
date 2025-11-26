@@ -3,7 +3,7 @@ import pandas as pd
 
 def visualisasi_data():
     try :
-        df = pd.read_csv('history_transaksi.csv') # baca file CSV
+        df = pd.read_csv(r"D:\Kuliah\praktikum\Projek-Akhir\Sistem Manajemen Stok dan Transaksi Gudang Pakan Ternak\history_transaksi.csv") # baca file CSV
 
         # Group data berdasarkan 'nama_produk' dan jumlahkan(sum) nilai 'jumlah_yang_dibeli' untuk setiap grup
         # Hasilnya adalah DataFrame baru dengan kolom 'nama_produk' dan 'jumlah_yang_dibeli'

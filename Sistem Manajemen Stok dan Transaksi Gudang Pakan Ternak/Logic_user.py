@@ -208,7 +208,7 @@ def history(username):
         print(f"│" + Fore.YELLOW + 'HISTORY TRANSAKSI USER'.center(96) + Style.RESET_ALL + "│")
         print(f"└{'─'*96}┘")
 
-        df = pd.read_csv("history_transaksi.csv") # baca file csv
+        df = pd.read_csv(r"D:\Kuliah\praktikum\Projek-Akhir\Sistem Manajemen Stok dan Transaksi Gudang Pakan Ternak\history_transaksi.csv") # baca file csv
         data = df[df["nama_pembeli"].str.lower() == username.lower()] # ambil data untuk user 
         
         if not data.empty:

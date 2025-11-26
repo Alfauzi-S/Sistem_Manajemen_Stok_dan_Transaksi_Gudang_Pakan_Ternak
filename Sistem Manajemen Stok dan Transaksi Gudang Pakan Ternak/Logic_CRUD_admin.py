@@ -167,7 +167,7 @@ def history():
         print(f"│" + Fore.YELLOW + 'HISTORY TRANSAKSI USER'.center(96) + Style.RESET_ALL + "│")
         print(f"└{'─'*96}┘")
 
-        df = pd.read_csv("history_transaksi.csv") # baca file CSV
+        df = pd.read_csv(r"D:\Kuliah\praktikum\Projek-Akhir\Sistem Manajemen Stok dan Transaksi Gudang Pakan Ternak\history_transaksi.csv") # baca file CSV
         
         if not df.empty:
             print(df.to_string(index=False)) # tampilkan data history tanpa index

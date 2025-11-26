@@ -8,7 +8,7 @@ def clear():
 def history_belanja(username, keranjang_user, total_pembelian):
     kolom = ['nama_pembeli', 'tanggal_pembelian', 'total_bayar', 'id_produk', 'nama_produk', 'jumlah_yang_dibeli'] 
     try:
-        df_history = pd.read_csv('history_transaksi.csv') # baca file CSV
+        df_history = pd.read_csv(r"D:\Kuliah\praktikum\Projek-Akhir\Sistem Manajemen Stok dan Transaksi Gudang Pakan Ternak\history_transaksi.csv") # baca file CSV
         
     except FileNotFoundError: 
         df_history = pd.DataFrame(columns=kolom) # jika file tidak ada buat baru dengan kolom yang ditentukan
@@ -29,4 +29,4 @@ def history_belanja(username, keranjang_user, total_pembelian):
         data_baru_list.append(data_baris) # masukan data_baris dict ke data_baru_list yang menjadi data list of dict 
     df_baru = pd.DataFrame(data_baru_list, columns=kolom) #buat dataframe dengan kolom di tentunkan
     df_gabungan = pd.concat([df_history, df_baru], ignore_index=True) # gabungkan df_history dengan df_baru
-    df_gabungan.to_csv('history_transaksi.csv', index=False) # tulis DataFrame gabungan ke file CSV 'history_transaksi.csv' dan tanpa index
+    df_gabungan.to_csv(r"D:\Kuliah\praktikum\Projek-Akhir\Sistem Manajemen Stok dan Transaksi Gudang Pakan Ternak\history_transaksi.csv", index=False) # tulis DataFrame gabungan ke file CSV 'history_transaksi.csv' dan tanpa index
