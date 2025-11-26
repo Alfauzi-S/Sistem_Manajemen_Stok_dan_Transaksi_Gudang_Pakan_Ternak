@@ -42,7 +42,10 @@ def harus_nomor_boleh_kosong(p):
             return None # Kembalikan None
         try:
             input_angka = int(input_str)
-            return input_angka
+            if input_angka > 0: # harus lebih dari 0
+                return input_angka 
+            else:
+                print(Fore.RED + "Harus lebih dari 0.")
         except ValueError:
             print(Fore.RED + "Input harus berupa angka.")
 
