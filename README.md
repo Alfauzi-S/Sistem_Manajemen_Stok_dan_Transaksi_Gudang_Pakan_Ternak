@@ -90,9 +90,4 @@ Sistem_Manajemen_Stok_dan_Transaksi_Gudang_Pakan_Ternak/
 └── README.md
 ```
 
-## 👨‍💼 Penulis
-
-**Alfauzi-S**  
-**Tahun**: 2025
-
 Proyek ini dibuat untuk keperluan pembelajaran dan praktikum pemrograman.
