@@ -90,4 +90,4 @@ Sistem_Manajemen_Stok_dan_Transaksi_Gudang_Pakan_Ternak/
 └── README.md
 ```
 
-Proyek ini dibuat untuk keperluan pembelajaran dan praktikum pemrograman.
+Proyek ini dibuat untuk keperluan pembelajaran dan praktikum Algoritma da Pemrograman Lanjut.
